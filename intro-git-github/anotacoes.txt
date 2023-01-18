@@ -1,0 +1,20 @@
+Comandos git:
+Comando para visualizar pastas ocultas: -a
+Criando uma nova branch a partir da **master** >> git checkout - b *nome da branch*
+
+git checkout main (p/ voltar para main)
+
+git status
+
+git add . 
+
+git commit -m "fdfkhduf gcug"
+
+git branch (p/ saber onde está)
+
+git diff (mostra as diferenças)
+
+O Git Bash é um terminal extendido para otimizar o uso do git.
+
+Fork é uma copia de um repositório. Segue de maneira independente sem precisar utilizar 
+o repositório principal. 
