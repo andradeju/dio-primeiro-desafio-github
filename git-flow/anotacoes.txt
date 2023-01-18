@@ -1,0 +1,58 @@
+## GitFlow
+
+É um modelo alternativo de ramificação do Git que consiste no uso de ramificações de recursos 
+e várias ramificações primárias.
+
+O Git Flow trabalha com duas branches principais:
+
+Develop
+
+Main 
+
+Essas branches (Develop e main) duram para sempre.
+
+Branches de suporte: Feature, Release, Bugfix e Hotfix. Duram até o merge com as principais.
+
+Main > onde fica o código de produção. Todas as novas funcionalidades que estamos desenvolvendo, em algum momento, 
+serão mesclados ou associadas aqui.
+
+Develop > onde fica o código do nosso próximo deploy. 
+
+Release > Serve como ponte para fazer o merge da Develop para Main. Funciona como ambiente de 
+homologação e é removida após realizar os testes e do merge com a Main. Caso haja alguma alteração, 
+ela também deve ser sincronizada com a Develop.
+
+Inicio da task:
+Entre na pasta do projeto com a linha de comando
+
+#Vá para a branch padrão
+git checkout develop
+
+#Atualize seu repositório local
+git pull
+
+#Crie uma nova branch com base na develop para sua tarefa
+git checkout -b feat/NomeDaTask
+
+#E se minha task for um bugfix ao inves de feature?
+git checkout -b bugfix/nomeDaTask
+
+#E se minha task for um hotfix?
+git checkout main
+git pull
+git checkout -b hotfix/nomeDaTask
+
+Finalizei minha task:
+#Enviar a sua branch para o github
+git push -u origin nomeDaBranch
+
+Enviei minha branch para o Github e agora?
+- Abra o github
+- Crie um merge request
+- Selecione a branch alvo (develop)
+- Selecione a sua branch
+- Clique em criar pull request
+
+
+Finalizei minha task, já subi minha pull request, e agora?
+- Refaça o processo a partir da parte 2
